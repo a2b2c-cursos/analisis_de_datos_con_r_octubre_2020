@@ -17,7 +17,7 @@ Por favor, ingresen con su nombre completo y no compartan el vínculo con nadie,
 
 La instalación de R en nuestra computadora depende del sistema operativo. En el sitio oficial de R, https://cran.r-project.org/ hay tutoriales para instalar R en los tres principales sistemas operativos (Linux, Windows y Mac). Para Windows, alcanza con descargar el instalador desde:
 
-https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe
+(https://cran.r-project.org/bin/windows/base/R-4.0.2-win.exe)
 
 y ejecutarlo.
 
