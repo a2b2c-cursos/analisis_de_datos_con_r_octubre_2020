@@ -49,12 +49,12 @@ Para Ubuntu pueden ver este tutorial:
 
 [https://youtu.be/PFlLatx5mlQ?t=344](https://youtu.be/PFlLatx5mlQ?t=344)
 
-Los que tienen instalado anaconda puede que ya tengan R y RStudio instalado. Para verificarlo, pueden ingresar en la consola el comando anaconda-navigator, comando que les abrirá un panel de control donde les debería aparecer RStudio disponible para usar o instalar. 
-
 Recomendamos fuertemente darle una ojeada antes del primer día al tutorial de R: [https://cran.r-project.org/doc/manuals/r-release/R-intro.html](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)
 
-# Cronograma
-Las clases comenzarán el lunes 5 de octubre a las 09:30 hs (GMT -3). Durante ese ratito sólo nos dedicaremos a ayudarles con la instalación o configuración de programas, y para responder cualquier duda que les haya surgido. Comenzaremos a cubrir contenidos propios del curso a partir de las 10:00 hs y hasta las 13:00 hs. Intentaremos ser puntuales en el comienzo y fin de cada jornada.
+# Inicio de actividades
+Las clases comenzarán el lunes 5 de octubre a las 09:30 hs (GMT -3).
+La primera media hora de la clase está contemplada para que puedan realizarnos consultas sobre los ejercicios de las prácticas anteriores, con excepcion del primer día que realizaremos una presentación del curso. 
+Los contenidos propios del curso a partir de las 10:00 hs y hasta las 13:00 hs. Intentaremos ser puntuales en el comienzo y fin de cada jornada.
 
 No dejen de escribirnos por cualquier duda. Les agradecemos mucho por confiar en nosotros para acompañarlos en su formación. Daremos lo mejor de nosotros para que se lleven una buena y útil experiencia.
 
