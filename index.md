@@ -41,7 +41,7 @@ Para facilitar su uso, vamos a instalar además RStudio Desktop, un entorno de d
 
 y seleccionar la versión del instalador adecuada a nuestro sistema operativo. Para Windows alcanza con descargar el instalador:
 
-[https://www.rstudio.com/products/rstudio/download/#download](https://download1.rstudio.org/desktop/windows/RStudio-1.3.1093.exe)
+[https://download1.rstudio.org/desktop/windows/RStudio-1.3.1093.exe](https://download1.rstudio.org/desktop/windows/RStudio-1.3.1093.exe)
 
  y ejecutarlo.
 
