@@ -8,3 +8,5 @@ Viernes 9 de octubre de 2020: Introducción a la estadística descriptiva
 Lunes 12 de octubre de 2020: Introducción a las pruebas de hipótesis.
 
 Miércoles 14 de octubre de 2020: Introducción a la regresión lineal
+
+[Programa del curso](https://github.com/a2b2c-cursos/analisis_de_datos_con_r_octubre_2020/programa.docx)
