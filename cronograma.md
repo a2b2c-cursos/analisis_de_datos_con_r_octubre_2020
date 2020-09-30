@@ -9,4 +9,4 @@ Lunes 12 de octubre de 2020: Introducción a las pruebas de hipótesis.
 
 Miércoles 14 de octubre de 2020: Introducción a la regresión lineal
 
-[Programa del curso](https://github.com/a2b2c-cursos/analisis_de_datos_con_r_octubre_2020/programa.docx)
+[Programa del curso](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/cronograma/programa.docx)
