@@ -53,8 +53,8 @@ Recomendamos fuertemente darle una ojeada antes del primer día al tutorial de R
 
 # Inicio de actividades
 Las clases comenzarán el lunes 5 de octubre a las 09:30 hs (GMT -3).
-La primera media hora de la clase está contemplada para que puedan realizarnos consultas sobre los ejercicios de las prácticas anteriores, con excepcion del primer día que realizaremos una presentación del curso. 
-Los contenidos propios del curso a partir de las 10:00 hs y hasta las 13:00 hs. Intentaremos ser puntuales en el comienzo y fin de cada jornada.
+La primera media hora de cada clase está contemplada para que puedan realizarnos consultas sobre los ejercicios de las prácticas anteriores, con excepcion del primer día que realizaremos una presentación del curso.
+Los contenidos propios del curso se veran a partir de las 10:00 hs y hasta las 13:00 hs. Intentaremos ser puntuales en el comienzo y fin de cada jornada.
 
 No dejen de escribirnos por cualquier duda. Les agradecemos mucho por confiar en nosotros para acompañarlos en su formación. Daremos lo mejor de nosotros para que se lleven una buena y útil experiencia.
 
