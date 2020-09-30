@@ -1,4 +1,4 @@
-## Bibliografía recomendada (manuales, tutoriales, libros y otras yerbas):
+### Bibliografía recomendada (manuales, tutoriales, libros y otras yerbas):
 * An introduction to R. [online](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)
 * Peng R. (2015),  R Programming for Data Science, Lean Publishing
 * Everitt B. (2010), A Handbook of Statistical Analyses Using R, CRC Press.
