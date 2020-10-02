@@ -6,7 +6,10 @@ Bienvenidas y bienvenidos al curso Análisis de Datos con R, organizado por la A
 La modalidad será teórico-práctica y con clases virtuales en vivo a través de una reunión privada de Zoom. Los contenidos estarán basados en diferentes lecciones y recursos preparados por nosotros. Realizaremos actividades conjuntas en el horario del curso usando RStudio, con prácticas supervisadas durante y entre clases. Iremos subiendo los contenidos preparados y otros que se generen durante el curso en la sección "Clases".
 Para los cinco días del curso deberán conectarse a la siguiente sala de Zoom (pueden hacer clic sobre el link que sigue, o ingresar el ID y código de acceso directamente en la aplicación):
 
--- Próximamente
+Unirse a la reunión de Zoom
+https://us02web.zoom.us/j/7788921342?pwd=YzhleUI4S3RydHNxK0F4ZWdTU1BBUT09
+ID de reunión: 778 892 1342
+Código de acceso: 678998
 
 Por favor, ingresen con su nombre completo y no compartan el vínculo con nadie, ni tampoco el ID y contraseña de la reunión. Intentaremos comenzar y terminar las clases con puntualidad.
 
