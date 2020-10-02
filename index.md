@@ -3,14 +3,8 @@
 Bienvenidas y bienvenidos al curso Análisis de Datos con R, organizado por la Asociación Argentina de Bioinformática y Biología Computacional. En este curso, Andrés Rabinovich, Maximiliano Beckel y Ariel Chernomoretz les acompañaremos a conocer el lenguaje de programación R y cómo aprovecharlo para su trabajo e investigaciones.
 
 # Modalidad de cursada
-La modalidad será teórico-práctica y con clases virtuales en vivo a través de una reunión privada de Zoom. Los contenidos estarán basados en diferentes lecciones y recursos preparados por nosotros. Realizaremos actividades conjuntas en el horario del curso usando RStudio, con prácticas supervisadas durante y entre clases. Iremos subiendo los contenidos preparados y otros que se generen durante el curso en la sección "Clases".
-Para los cinco días del curso deberán conectarse a la siguiente sala de Zoom (pueden hacer clic sobre el link que sigue, o ingresar el ID y código de acceso directamente en la aplicación):
-
-Unirse a la reunión de Zoom  
-[https://us02web.zoom.us/j/7788921342?pwd=YzhleUI4S3RydHNxK0F4ZWdTU1BBUT09](https://us02web.zoom.us/j/7788921342?pwd=YzhleUI4S3RydHNxK0F4ZWdTU1BBUT09)  
-ID de reunión: 778 892 1342  
-Código de acceso: 678998  
-
+La modalidad será teórico-práctica y con clases virtuales en vivo a través de una reunión privada de Zoom. Los contenidos estarán basados en diferentes lecciones y recursos preparados por nosotros. Realizaremos actividades conjuntas en el horario del curso usando RStudio, con prácticas supervisadas durante y entre clases. Iremos subiendo los contenidos preparados y otros que se generen durante el curso en la sección "Clases".  
+Para los cinco días del curso deberán conectarse a la sala de Zoom que les enviamos por email.  
 Por favor, ingresen con su nombre completo y no compartan el vínculo con nadie, ni tampoco el ID y contraseña de la reunión. Intentaremos comenzar y terminar las clases con puntualidad.
 
 # Prerequisitos
@@ -55,8 +49,8 @@ Para Ubuntu pueden ver este tutorial:
 Recomendamos fuertemente darle una ojeada antes del primer día al tutorial de R: [https://cran.r-project.org/doc/manuals/r-release/R-intro.html](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)
 
 # Inicio de actividades
-Las clases comenzarán el lunes 5 de octubre a las 09:30 hs (GMT -3).
-La primera media hora de cada clase está contemplada para que puedan realizarnos consultas sobre los ejercicios de las prácticas anteriores, con excepcion del primer día que realizaremos una presentación del curso.
+Las clases comenzarán el lunes 5 de octubre a las 09:30 hs (GMT -3).  
+La primera media hora de cada clase está contemplada para que puedan realizarnos consultas sobre los ejercicios de las prácticas anteriores, con excepcion del primer día que realizaremos una presentación del curso.  
 Los contenidos propios del curso se veran a partir de las 10:00 hs y hasta las 13:00 hs. Intentaremos ser puntuales en el comienzo y fin de cada jornada.
 
 No dejen de escribirnos por cualquier duda. Les agradecemos mucho por confiar en nosotros para acompañarlos en su formación. Daremos lo mejor de nosotros para que se lleven una buena y útil experiencia.
