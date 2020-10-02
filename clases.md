@@ -1,6 +1,8 @@
 ### Clase 1: Introducción a R y RStudio
 
-Proximamente
+[Práctica](https://github.com/a2b2c-cursos/analisis_de_datos_con_r_octubre_2020/clases/practica_dia_1.docx)
+[Script de R](https://github.com/a2b2c-cursos/analisis_de_datos_con_r_octubre_2020/clases/dia_1.R)
+[Cuadernillo](https://rpubs.com/msbeckel/cursoR_dia1)
 
 ### Clase 2: Introducción a R, continuación
 
