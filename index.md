@@ -7,7 +7,7 @@ La modalidad será teórico-práctica y con clases virtuales en vivo a través d
 Para los cinco días del curso deberán conectarse a la siguiente sala de Zoom (pueden hacer clic sobre el link que sigue, o ingresar el ID y código de acceso directamente en la aplicación):
 
 Unirse a la reunión de Zoom  
-https://us02web.zoom.us/j/7788921342?pwd=YzhleUI4S3RydHNxK0F4ZWdTU1BBUT09  
+[https://us02web.zoom.us/j/7788921342?pwd=YzhleUI4S3RydHNxK0F4ZWdTU1BBUT09](https://us02web.zoom.us/j/7788921342?pwd=YzhleUI4S3RydHNxK0F4ZWdTU1BBUT09)  
 ID de reunión: 778 892 1342  
 Código de acceso: 678998  
 
