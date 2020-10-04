@@ -1,3 +1,5 @@
+[Presentación](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/presentacion.pdf)  
+
 ### Clase 1: Introducción a R y RStudio
 
 * [Práctica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/practica_dia_1.docx)  
