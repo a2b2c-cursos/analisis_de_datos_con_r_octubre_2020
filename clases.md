@@ -4,7 +4,9 @@
 
 * [Práctica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/practica_dia_1.docx)  
 * [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/dia_1.R)  
-* [Cuadernillo](https://rpubs.com/msbeckel/cursoR_dia1)  
+* [Cuadernillo](https://rpubs.com/msbeckel/cursoR_dia1)
+* [Cuadernillo descargable](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/dia_1.Rmd)
+* [Script de R con modificaciones hechas en la clase](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/dia_1_con_ediciones_hechas_en_clase)
 
 ### Clase 2: Introducción a R, continuación
 
