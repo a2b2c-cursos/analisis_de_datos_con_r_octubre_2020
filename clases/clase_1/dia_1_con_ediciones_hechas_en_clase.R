@@ -192,6 +192,7 @@ columnas_indexadas <- c(TRUE, TRUE)
 plantas[, columnas_indexadas]
 
 plantas$group == "trt2"
+#----Fin dia 1-----#
 which(plantas$group == "trt2")
 
 plantas[which(plantas$group == "trt2"), ] #con which le estoy preguntando cuales son las filas en las que en la columna
