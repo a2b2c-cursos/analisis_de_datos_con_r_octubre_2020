@@ -15,7 +15,8 @@
 * [Cuadernillo](https://rpubs.com/msbeckel/cursoR_dia2)
 * [Cuadernillo descargable](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_2/curso_r_dia2.Rmd)
 * [Dataset](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_2/antropometria.csv)  
-* [Clase grabada](https://youtu.be/Vtgpgbuunes)  
+* [Clase grabada parte 1](https://youtu.be/Vtgpgbuunes)  
+* [Clase grabada parte 2](https://youtu.be/JbPcEgd72d8)  
 
 ### Clase 3: Introducción a la estadística descriptiva
 
@@ -23,6 +24,8 @@
 * [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/dia_3.R)  
 * [Datasets](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/datasets.zip)    
 * [Teórica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/dia_3.pdf)    
+* [Clase grabada parte 1](https://youtu.be/deUsv9507hs)  
+* [Clase grabada parte 2](https://youtu.be/MKxoPQaAxSs)  
 
 ### Clase 4: Introducción a las pruebas de hipótesis.
 
