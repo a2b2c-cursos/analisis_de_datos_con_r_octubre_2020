@@ -26,7 +26,9 @@
 
 ### Clase 4: Introducción a las pruebas de hipótesis.
 
-Proximamente
+* [Práctica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/practica_dia_4.pdf)   
+* [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.R)  
+* [Presentación](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.pdf)    
 
 ### Clase 5: Introducción a la regresión lineal
  
