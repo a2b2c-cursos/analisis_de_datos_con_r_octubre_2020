@@ -250,6 +250,27 @@ shapiro.test(alturasHolanda)
 ?t.test
 t.test(alturasHolanda, mu = 175)
 
+#¿Qué es el intervalo de confianza de 95%?
+#El mismo test nos estima la media de la población de la muestra que tomamos. Nos dice que la estima en 181.3 cm pero nos da algo mejor, nos da un intervalo
+#de confianza del 98%, entre 180.23 cm hasta 182.37 cm. ¿Esto significa que hay un 95% de probabilidades de que la media real de la población de Holanda esté
+#en este intervalo? No! La media de la población no es una variable aleatoria, o está en el intervalo o no está. Lo que nos dice ese intervalo es que si 
+#tomamos 100 muestras y construimos el intervalo de confianza de 95%, esperamos que en el 95% de los casos la media de la población 
+#esté contenida en el intervalo.
+#Probemosló con nuestro laboratorio. Supongamos que la media de altura de la población de Holanda es 182 cm con un desvío de 7cm y tomemos 100 muestras.
+set.seed(1234567)
+mediaReal <- 182
+aciertos <- 0
+muestras <- 100
+for(i in 1:muestras){
+  alturasHolanda <- rnorm(10, mean = mediaReal, sd = 7)
+  testDeAltura <- t.test(alturasHolanda, mu = 175)
+  if(testDeAltura$conf.int[1] < mediaReal & mediaReal < testDeAltura$conf.int[2]){
+    aciertos <- aciertos + 1
+  }
+}
+aciertos
+
+
 #Queremos estudiar el efecto de dos tratamientos en el crecimiento de una planta. Para ello contamos con plantas a las que se las trató con un placebo, plantas
 #tratadas con la droga1 y plantas tratadas con la droga 2. ¿Cómo podemos saber si el tratamiento 1 o el tratamiento 2 fue efectivo?
 #Usemos un t Test de dos muestras independientes para comparar el control con tratamiento 1 y el control con tratamiento 2
