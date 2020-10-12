@@ -12,11 +12,14 @@
 #Leamos un csv
 
 #Primero le decimos a R en qué directorio queremos que trabaje
-setwd("~/analisis_de_datos_con_r_octubre_2020/clases/clase_3")
+getwd()
+setwd("~/trabajo/cursos/analisis_de_datos_con_r_octubre_2020/clases/clase_3")
 
+#setwd("trabajo/cursos/analisis_de_datos_con_r_octubre_2020/clases/clase_3")
 #Leemos un archivo csv. Usamos header = T para que tome la primera fila del archivo como los nombres de los atributos
 #y stringsAsFactors = F para que no modifique los atributos tipo character o string
 casos_covid <- read.csv(file = "datasets/cases-covid-19.csv", stringsAsFactors = F, header = T)
+casos_covid <- cases.covid.19
 
 #Veamos cuantos datos tiene nuestro dataset, representados por las filas de la tabla
 nrow(casos_covid)
@@ -26,7 +29,9 @@ ncol(casos_covid)
 
 #Veamos qué tipo de atributos son
 str(casos_covid)
+class(casos_covid)
 
+casos_covid
 #Imprimamos las primeras 10 filas del dataset
 head(casos_covid, n = 10)
 
@@ -73,11 +78,12 @@ str(casos_covid_secuenciados)
 #Veamos un resumen de Sequence.Length
 class(casos_covid_secuenciados$Virus.Strain.Name)
 
-nrow(casos_covid_secuenciados)
+#nrow(casos_covid_secuenciados)
 
 casos_covid_secuenciados$Sequence.Length
 
 summary(casos_covid_secuenciados$Sequence.Length)
+summary(casos_covid_secuenciados[, c("a", "c", "g", "t")])
 
 #Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #64   29780   29852   26310   29882   29981
@@ -87,6 +93,8 @@ summary(casos_covid_secuenciados$Sequence.Length)
 #Calculemos las distintas medidas de centralidad
 media <- mean(casos_covid_secuenciados$Sequence.Length)
 media
+
+#hist(casos_covid_secuenciados$Sequence.Length)
 
 mediana <- median(casos_covid_secuenciados$Sequence.Length)
 mediana
@@ -102,9 +110,11 @@ varianza
 desvio <- sd(casos_covid_secuenciados$Sequence.Length)
 desvio
 
+desvio*desvio
+
 iqr <- IQR(casos_covid_secuenciados$Sequence.Length)
 iqr
-
+mediana
 #Hay mucha diferencia entre el rango, el desvío y el IQR. Esto nos dice que seguramente hay valores muy extremos que vamos a tener que analizar por separado.
 
 #Grafiquemos un histograma con la distribución
@@ -131,22 +141,42 @@ boxplot(secuencias_largas)
 #R permite graficar tipo mosaico, así podemos graficar los dos juntos
 #La función layout recibe una matriz y grafica un mosaico en función de la cantidad de filas
 #y columnas que tiene esa matriz
-mosaico_layout <- matrix(1:2, ncol=1, nrow = 2)
+#dev.new()
+mosaico_layout <- matrix(1:4, ncol=2, nrow = 2, byrow = T)
 layout(mosaico_layout)
 hist(secuencias_largas)
 boxplot(secuencias_largas, horizontal = T) #Graficamos el boxplot horizontal para comparar
+x <- seq(-pi, pi, 0.1)
+y <- sin(x)
+plot(x, y)
+hist(secuencias_largas)
+boxplot(secuencias_largas, horizontal = T) #Graficamos el boxplot horizontal para comparar
+hist(secuencias_largas)
+boxplot(secuencias_largas, horizontal = T) #Graficamos el boxplot horizontal para comparar
+
+dev.off()
 
 #Volvemos al layout convencional
 layout(1)
+plot(1, 1)
 
 #Volvamos a la moda. La moda es el valor que más veces aparece. Para calcularla tenemos que contar 
 #cuantas veces aparece cada valor y quedarnos con el que más veces aparezca.
 #Usamos table para contar y which.max para que nos diga cual es el valor que más aparece
 cuantas_veces_aparece_cada_valor <- table(secuencias_largas)
-which.max(cuantas_veces_aparece_cada_valor)
-median(secuencias_largas)
-mean(secuencias_largas)#
+class(cuantas_veces_aparece_cada_valor)
+nombresDeLaTabla <- names(cuantas_veces_aparece_cada_valor)
 
+max(cuantas_veces_aparece_cada_valor)
+cuantas_veces_aparece_cada_valor[which.max(cuantas_veces_aparece_cada_valor)]
+median(secuencias_largas)
+mean(secuencias_largas)
+
+v <- c(1, 2, 3, 4, 5, 3)
+
+which(v == 3)
+
+which
 #------------------------------------------------------------------------------------
 #Ejercicios: 
 #casos_covid_secuenciados$a
@@ -154,10 +184,15 @@ mean(secuencias_largas)#
 #elegir un criterio para removerlos.
 #2-Encuentren cuantas secuencias hay de cada país.
 #------------------------------------------------------------------------------------
-
-
-
-
+hist(casos_covid_secuenciados$a)
+boxplot(casos_covid_secuenciados$a, horizontal = T)
+a_largos <- casos_covid_secuenciados$a[casos_covid_secuenciados$a > 4000]
+iqr <- IQR(casos_covid_secuenciados$a)
+primer_cuartil <- quantile(casos_covid_secuenciados$a, probs = 0.25)
+valor_de_corte <- primer_cuartil - 1.5*iqr
+a_largos <- casos_covid_secuenciados$a[casos_covid_secuenciados$a > valor_de_corte]
+hist(a_largos)
+boxplot(a_largos)
 
 #Podemos ver cuantas secuencias hay por ubicación
 table(casos_covid_secuenciados$Location)
@@ -180,6 +215,15 @@ primerItem <- function(v){
 vectorDePrueba <- c("Curso", "De", "R")
 primerItem(vectorDePrueba)
 
+v <- paises[[1]]
+primerItem(v)
+v <- paises[[2]]
+primerItem(v)
+v <- paises[[3]]
+primerItem(v)
+v <- paises[[550]]
+primerItem(v)
+
 #Apliquemos primerItem a cada elemento de la lista para obtener los países
 paises <- lapply(paises, primerItem)
 paises
@@ -187,7 +231,7 @@ class(paises)
 
 #Sigue siendo una lista, podemos "desenlistarla"
 paises <- unlist(paises)
-paises
+table(paises)
 
 #Podemos agregarlo como columna del dataframe para usarlo si lo necesitamos después
 casos_covid_secuenciados$pais <- paises
@@ -214,9 +258,12 @@ boxplot(acgt)
 #Vemos que las 4 bases tienen distribuciones diferentes.
 #¿Existirá relación entre ellas? Veamos que pasa con c y t. Podemos agregar titulo, nombrar los ejes y jugar con los límites.
 plot(acgt$c, acgt$t, main = "c vs. t", xlab = "c (bases)", ylab="t (bases)", xlim=c(5400, 5500), ylim=c(9500, 9600))
+plot(acgt$c, acgt$t, xlim=c(5400, 5500), ylim=c(9500, 9600), main = "c vs. t", xlab = "c (#bases)", ylab = "t (#bases)")
+
 #Pareciera haber una relación lineal creciente entre ambas
 #Veamos todas contra todas
 pairs(acgt)
+
 #Todas tienen una relación lineal creciente.
 #¿Descubrimos nueva biología o qué puede estar pasando?
 #Agreguemos la longitud de la secuencia
@@ -232,8 +279,12 @@ pairs(casos_covid_secuenciados[ids_secuencias_largas, c("Sequence.Length", "a", 
 #Usamos matplot para graficar las coordenadas paralelas. Tenemos que transponer
 #el dataframe para que tome las columnas como variables, y le decimos que el type
 #sea "l" para que grafique segmentos
-matplot(t(casos_covid_secuenciados[ids_secuencias_largas, c("an", "cn", "gn", "tn")]), type="l")
+matplot(t(casos_covid_secuenciados[ids_secuencias_largas, c("an", "cn", "gn", "tn")]), type="l", col = "black")
 summary(casos_covid_secuenciados[ids_secuencias_largas, c("Sequence.Length", "an", "cn", "gn", "tn")])
+x <- seq(-pi, pi, 0.1)
+y <- sin(x)
+plot(x, y, pch = 15)
+legend("bottomright", legend = c("Seno x"), pch = 15)
 
 #------------------------------------------------------------------------------------
 #Ejercicios: 
