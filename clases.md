@@ -26,7 +26,7 @@
 * [Teórica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/dia_3.pdf)    
 * [Clase grabada parte 1](https://youtu.be/deUsv9507hs)  
 * [Clase grabada parte 2](https://youtu.be/MKxoPQaAxSs)  
-* [Clase grabada parte 3](https://youtu.be/MKxoPQaAxSs)  
+* [Clase grabada parte 3](https://youtu.be/sYT3HzYnJgA)  
 
 ### Clase 4: Introducción a las pruebas de hipótesis.
 
@@ -34,7 +34,7 @@
 * [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.R)  
 * [Presentación](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.pdf)    
 * [Script de R con modificaciones hechas en la clase](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4_con_modificaciones.R)
-* [Clase grabada parte 1](https://youtu.be/MKxoPQaAxSs)  
+* [Clase grabada parte 1](https://youtu.be/c_zoe3g3kxY)  
 
 ### Clase 5: Introducción a la regresión lineal
  
