@@ -237,7 +237,11 @@ maxNoSignificativo
 #Tomamos una muestra de la altura de personas en Holanda y queremos saber si la altura de esas personas es significativamente diferente de la
 #media mundial. Usamos un t Test de una muestra. El t Test require que los datos sean aproximadamente normales y sin outliers
 #(aunque es bastante robusto si esto no se cumple del todo).
-alturasHolanda <- c(182, 184, 182, 179, 181, 179, 182, 181, 182, 181)
+alturasHolanda <- c(182, 183, 182, 180, 181, 180, 182, 181, 182, 181)
+
+#Veamos outliers
+boxplot(alturasHolanda)
+
 #Veamos que estos datos cumplen normalidad. Usamos el test de shapiro-wilk que testea justamente eso
 
 #H0: Los datos son normales
@@ -273,7 +277,8 @@ aciertos
 
 #Queremos estudiar el efecto de dos tratamientos en el crecimiento de una planta. Para ello contamos con plantas a las que se las trató con un placebo, plantas
 #tratadas con la droga1 y plantas tratadas con la droga 2. ¿Cómo podemos saber si el tratamiento 1 o el tratamiento 2 fue efectivo?
-#Usemos un t Test de dos muestras independientes para comparar el control con tratamiento 1 y el control con tratamiento 2
+#Usemos un t Test de dos muestras independientes para comparar el control con tratamiento 1 y el control con tratamiento 2. Además de lo que le habíamos
+#pedido al t Test de una muestra (independencia, datos continuos, normalidad y sin outliers), la varianza de los dos grupos tiene que ser la misma.
 
 #Cargamos los datos
 plantas <- datasets::PlantGrowth
@@ -281,17 +286,36 @@ View(plantas)
 #Veamos como se distribuyen las plantas dentro de cada grupo
 boxplot(weight ~ group, data = plantas)
 
-#H0: las medias de los dos grupos son iguales
-#H1: las medias de los dos grupos son distintas
+#Para testear que las dos varianzas sean iguales (homogeneidad de varianzas) podemos usar el test de bartlett.
+#H0: Los datos tienen igual varianza
+#H1: Los datos no  tienen igual varianza
+bartlett.test(list(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt1"]))
+bartlett.test(list(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt2"]))
 
 #Chequeamos previamente normalidad de cada variable
 shapiro.test(plantas$weight[plantas$group == "ctrl"])
 shapiro.test(plantas$weight[plantas$group == "trt1"])
 shapiro.test(plantas$weight[plantas$group == "trt2"])
 
-#Todo parece normal, podemos seguir
+#Ahora si, podemos usar el t test de dos muestras
+#H0: las medias de los dos grupos son iguales
+#H1: las medias de los dos grupos son distintas
+
 t.test(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt1"])
 t.test(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt2"])
+
+#¿Qué pasa si nuestros datos no cumplen homogeneidad de varianza?
+#Veamos los datos de iris
+View(iris)
+
+#Comparamos setosa con versicolor en el largo del sépalo
+shapiro.test(iris$Sepal.Length[iris$Species == "setosa"])
+shapiro.test(iris$Sepal.Length[iris$Species == "versicolor"])
+#Veamos si cumplen homogeneidad de varianza
+bartlett.test(list(iris$Sepal.Length[iris$Species == "setosa"], iris$Sepal.Length[iris$Species == "versicolor"]))
+
+#Ups! Qué podemos hacer? Usar el test de welch
+t.test(iris$Sepal.Length[iris$Species == "setosa"], iris$Sepal.Length[iris$Species == "versicolor"], var.equal = F)
 
 #Queremos estudiar el efecto de una droga para tratar una cierta enfermedad.
 #Tenemos 105 pacientes, de los cuales 50 fueron tratados con la droga y 55 no. Después de un mes se controló el estado de salud de todos los pacientes.
