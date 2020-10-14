@@ -34,7 +34,9 @@
 * [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.R)  
 * [Presentación](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.pdf)    
 * [Script de R con modificaciones hechas en la clase](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4_con_modificaciones.R)
-* [Clase grabada parte 1](https://youtu.be/c_zoe3g3kxY)  
+* [Clase grabada parte 1](https://youtu.be/c_zoe3g3kxY)
+* [Clase grabada parte 2](https://youtu.be/FGp8679A_og)  
+
 
 ### Clase 5: Introducción a la regresión lineal
  
@@ -42,3 +44,4 @@
 * [Dataset](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_5/antropologia_poblaciones.csv)  
 * [Cuadernillo](https://rpubs.com/msbeckel/cursoR_dia5)  
 * [Cuadernillo descargable](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_5/dia_5.Rmd)
+* [Clase grabada](https://youtu.be/Q91GuF7D1OQ)

@@ -169,11 +169,14 @@ tail(x)
 d <- dnorm(x, mean = 0, sd = 1)
 
 #Grafiquemos cada par x, d de la densidad de probabilidad real.
-plot(x, d, main = "Densidad de probabilidad normal (mean = 0, sd = 0)")
+plot(x, d, main = "Densidad de probabilidad normal (mean = 0, sd = 1)")
 
 #¿Cómo podemos calcular la probabilidad de que al sacar una x cualquiera, la misma sea menor a -1? pnorm al rescate
 abline(v = -1, col="red")
 p1 <- pnorm(q = -1, mean = 0, sd = 1)
+p1
+table(norm < -1)/length(norm)
+
 #¿Y menor a 1?
 abline(v = 1, col="red")
 p2 <- pnorm(q = 1, mean = 0, sd = 1)
@@ -182,6 +185,9 @@ p2 - p1
 #El 68% de las x están entre -1 y 1, es decir, el 68% de las x están a un desvío estandar de la media!
 
 #¿Cuál es el valor de x tal que la probabilidad de sacar una x menor sea de 0.025%? qnorm al rescate
+x3 <- qnorm(p = 0.25, mean = 0, sd = 1)
+pnorm(q = x3, mean = 0, sd = 1)
+
 x1 <- qnorm(p = 0.025, mean = 0, sd = 1)
 abline(v = x1, col="blue")
 
@@ -189,7 +195,7 @@ abline(v = x1, col="blue")
 x2 <- qnorm(p = 0.975, mean = 0, sd = 1)
 abline(v = x2, col="blue")
 #Entonces, ¿cuál es la probabilidad de sacar una x entre x1 y x2?
-
+0.975-0.025
 #Con estas herramientas ya estamos en condiciones de probar algunas cosas.
 #Juguemos a ser Levi-Strauss y el tipo de los aliens. Simulemos nuestros propios seres humanos. 
 #Supongamos que la distribución de la altura es normal, con media 175 cm y desvío estandar 7 cm. Tomemos una muestra de esa población.
@@ -210,6 +216,13 @@ mean(muestra2)
 #Volviendo a los aliens, ¿podemos cuantificar de alguna forma la sorpresa (o falta de sorpresa) que nos dio cada uno de los esqueletos encontrados?
 #Podríamos preguntarnos cuál es la probabilidad de encontrar una persona de 170 cm o más por azar. Usamos pnorm que nos da la probabilidad de 170 o menos
 #así que eso se lo tenemos que restar a la probabilidad total que es 1
+x <- seq(150, 200, by = 1)
+y <- dnorm(x, mean = 175, sd = 7)
+plot(x, y)
+
+pnorm(170, mean = 175, sd = 7)
+abline(v = 170)
+
 pvalue1 <- 1 - pnorm(170, mean = 175, sd = 7)
 pvalue1
 
@@ -225,9 +238,13 @@ pvalue2
 
 #¿Qué pasó? ¿Nos estaremos equivocando?
 
+pvalue2 <- 1 - pnorm(190, mean = 175, sd = 7)
+pvalue2
+
 #Veamos cuál es el valor de altura crítico para descartar que un esqueleto sea humano con una significancia de 0.01. qnorm al rescate. 
 maxNoSignificativo <- qnorm(0.99, mean = 175, sd = 7)
 maxNoSignificativo
+abline(v = maxNoSignificativo, col = "red")
 
 #En este caso pudimos hacer un test de hipótesis porque conocíamos la distribución de alturas para personas (es decir, la hipótesis nula). 
 #Pero ¿qué pasa en casos donde no conocemos esa distribución? 
@@ -248,7 +265,7 @@ boxplot(alturasHolanda)
 #H1: Los datos no son normales
 shapiro.test(alturasHolanda)
 
-#Cumplen normalidad, podemos usar t Test. Pero antes, elijamos un nivel de significancia (usualmente 0.05)
+#Cumplen normalidad, podemos usar t Test. Pero antes, elijamos un nivel de significancia (usualmente 0.05, 0.01)
 #H0: alturaMedia = 175 
 #H1: alturaMedia != 175
 ?t.test
@@ -274,7 +291,6 @@ for(i in 1:muestras){
 }
 aciertos
 
-
 #Queremos estudiar el efecto de dos tratamientos en el crecimiento de una planta. Para ello contamos con plantas a las que se las trató con un placebo, plantas
 #tratadas con la droga1 y plantas tratadas con la droga 2. ¿Cómo podemos saber si el tratamiento 1 o el tratamiento 2 fue efectivo?
 #Usemos un t Test de dos muestras independientes para comparar el control con tratamiento 1 y el control con tratamiento 2. Además de lo que le habíamos
@@ -284,11 +300,12 @@ aciertos
 plantas <- datasets::PlantGrowth
 View(plantas)
 #Veamos como se distribuyen las plantas dentro de cada grupo
+class(weight ~ group)
 boxplot(weight ~ group, data = plantas)
 
 #Para testear que las dos varianzas sean iguales (homogeneidad de varianzas) podemos usar el test de bartlett.
 #H0: Los datos tienen igual varianza
-#H1: Los datos no  tienen igual varianza
+#H1: Los datos no tienen igual varianza
 bartlett.test(list(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt1"]))
 bartlett.test(list(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt2"]))
 
@@ -301,8 +318,8 @@ shapiro.test(plantas$weight[plantas$group == "trt2"])
 #H0: las medias de los dos grupos son iguales
 #H1: las medias de los dos grupos son distintas
 
-t.test(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt1"])
-t.test(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt2"])
+t.test(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt1"], var.equal = T)
+t.test(plantas$weight[plantas$group == "ctrl"], plantas$weight[plantas$group == "trt2"], var.equal = T)
 
 #¿Qué pasa si nuestros datos no cumplen homogeneidad de varianza?
 #Veamos los datos de iris
@@ -311,6 +328,7 @@ View(iris)
 #Comparamos setosa con versicolor en el largo del sépalo
 shapiro.test(iris$Sepal.Length[iris$Species == "setosa"])
 shapiro.test(iris$Sepal.Length[iris$Species == "versicolor"])
+
 #Veamos si cumplen homogeneidad de varianza
 bartlett.test(list(iris$Sepal.Length[iris$Species == "setosa"], iris$Sepal.Length[iris$Species == "versicolor"]))
 
@@ -321,6 +339,7 @@ t.test(iris$Sepal.Length[iris$Species == "setosa"], iris$Sepal.Length[iris$Speci
 #Tenemos 105 pacientes, de los cuales 50 fueron tratados con la droga y 55 no. Después de un mes se controló el estado de salud de todos los pacientes.
 pacientes <- read.csv("https://goo.gl/j6lRXD")
 head(pacientes)
+
 #Se obtuvo la siguiente tabla (llamada tabla de contingencia):
 table(pacientes$treatment, pacientes$improvement)
 
