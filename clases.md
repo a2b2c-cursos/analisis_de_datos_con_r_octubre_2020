@@ -33,6 +33,7 @@
 ### Clase 4: Introducción a las pruebas de hipótesis.
 
 * [Práctica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/practica_dia_4.pdf)   
+* [Práctica resuelta](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/solucion_practica_dia_4.R)    
 * [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.R)  
 * [Presentación](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4.pdf)    
 * [Script de R con modificaciones hechas en la clase](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_4/dia_4_con_modificaciones.R)
