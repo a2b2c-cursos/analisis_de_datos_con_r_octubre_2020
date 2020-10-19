@@ -3,6 +3,7 @@
 ### Clase 1: Introducción a R y RStudio
 
 * [Práctica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/practica_dia_1.docx)  
+* [Práctica resuelta](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/solucion_practica_dia_1.R)    
 * [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/dia_1.R)  
 * [Cuadernillo](https://rpubs.com/msbeckel/cursoR_dia1)
 * [Cuadernillo descargable](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_1/dia_1.Rmd)
@@ -21,10 +22,10 @@
 ### Clase 3: Introducción a la estadística descriptiva
 
 * [Práctica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/practica_dia_3.pdf)   
+* [Práctica resuelta](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/solucion_practica_dia_3.R)    
 * [Script de R](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/dia_3.R)  
 * [Datasets](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/datasets.zip)    
 * [Teórica](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/dia_3.pdf)
-* [Práctica resuelta](https://a2b2c-cursos.github.io/analisis_de_datos_con_r_octubre_2020/clases/clase_3/solucion_practica_dia_3.pdf)    
 * [Clase grabada parte 1](https://youtu.be/deUsv9507hs)  
 * [Clase grabada parte 2](https://youtu.be/MKxoPQaAxSs)  
 * [Clase grabada parte 3](https://youtu.be/sYT3HzYnJgA)  
